@@ -52,20 +52,18 @@ $(document).ready(function() {
 
     $(".output").remove();
     var userInput = $("#number").val();
-    while (numberCheck(userInput) !== false) {
-      $(".wrong").remove();
-      $("#results").append("<div class='wrong'><p>That's not a number! Try again</p>")
-      break;
-    }
 
-  //  if (numberCheck(userInput) !== false) {
+    if (numberCheck(userInput) !== false) {
+      $(".wrong").remove();
       $("#results").append("<div class='output'><p>You entered: " + userInput + ".")
       var output = transform(inputArray(userInput));
-      debugger;
       output.forEach(function(number) {
         $(".output").append(number + "<br/>")
       });
-  //  }
+    } else {
+      $(".wrong").remove();
+      $("#results").append("<div class='wrong'><p>That's not a number! Try again</p>")
+    }
 
   });
 
