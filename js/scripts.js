@@ -9,11 +9,14 @@ function numberCheck(input) {
 };
 
 //takes a string/number and replaces it with other content
-function zeroOne(input) {
+function zeroOne(input, name) {
   //var input = numberCheck(input);
-
+  if (name === "") {
+    var name = "friend";
+  }
+  
   if (input % 3 === 0 && input !== 0) {
-    var input = "I'm sorry Dave, I'm afraid I can't do that"
+    var input = "I'm sorry " + name + ", I'm afraid I can't do that"
     return input;
     } else if ((/[1]/).test(input)) {
       var input = "Boop";
@@ -37,9 +40,9 @@ function inputArray(input) {
 }
 
 //take array of numbers from zeroOne and output changes
-function transform(input) {
+function transform(input, name) {
   var transformedArray = input.map(function(number) {
-    return zeroOne(number);
+    return zeroOne(number, name);
   });
 
   return transformedArray;
@@ -52,11 +55,12 @@ $(document).ready(function() {
 
     $(".output").remove();
     var userInput = $("#number").val();
+    var nameInput = $("#name").val();
 
     if (numberCheck(userInput) !== false) {
       $(".wrong").remove();
       $("#results").append("<div class='output'><p>You entered: " + userInput + ".")
-      var output = transform(inputArray(userInput));
+      var output = transform(inputArray(userInput), nameInput);
       output.forEach(function(number) {
         $(".output").append(number + "<br/>")
       });

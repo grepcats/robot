@@ -27,3 +27,8 @@ Example Output: Beep, Boop, 2, I'm sorry, Dave. I'm afraid I can't do that, 4, 5
 7. Program handles non-numeric characters
 Example Input: cat
 Example Output: error message and return to Program
+
+---
+Program takes user's name and displays in the "I'm sorry, Dave. I'm afraid I can't do that" transformation
+Example Input: Kayla, 3
+Example Output: Beep, Boop, I'm sorry, Kayla. I'm afraid I can't do that.
