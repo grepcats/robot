@@ -25,10 +25,19 @@ function zeroOne(input) {
     }
 }
 
+function inputArray(input) {
+  var input = numberCheck(input);
+  var countTo = []
+  for (var i = 0; i <= input; i++) {
+    countTo.push(i);
+  }
+  return countTo;
+}
 
 $(document).ready(function() {
   var userInput = prompt("please enter a number");
-  alert(zeroOne(userInput));
+  //alert(zeroOne(userInput));
+  alert(inputArray(userInput));
 
 
 
