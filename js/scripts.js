@@ -2,9 +2,9 @@
 //identifies if input is number or NaN
 function numberCheck(input) {
   if (isNaN(parseInt(input))) {
-    return input + " is not a number";
+    return false;
   } else {
-    return parseInt(input);
+    return input;
   }
 };
 
@@ -45,11 +45,11 @@ function transform(input) {
 
 $(document).ready(function() {
   var userInput = prompt("please enter a number");
-  //alert(zeroOne(userInput));
+  while (!numberCheck(userInput)) {
+    alert("try again!");
+    var userInput = prompt("please enter a number");
+  }
+
   alert(transform(inputArray(userInput)));
-
-
-
-
 
 });
