@@ -1,15 +1,3 @@
-
-//identifies if input is number or NaN
-function numberCheck(input) {
-  if (isNaN(parseInt(input)) || input === "" || input === " ") {
-    console.log(parseInt(input));
-    return false;
-  } else {
-    console.log(parseInt(input));
-    return parseInt(input);
-  }
-};
-
 //takes a string/number and replaces it with other content
 function zeroOne(input, name) {
   //var input = numberCheck(input);
@@ -59,13 +47,12 @@ $(document).ready(function() {
   $("#number-input").submit(function(event) {
     event.preventDefault();
     $(".output").remove();
-    var userInput = numberCheck($("#number").val());
+    var userInput = parseInt($("#number").val());
     var nameInput = $("#name").val();
     var revNum = 0;
 
 
-    if (userInput !== false) {
-      debugger;
+    if (!isNaN(userInput)) {
       console.log(userInput);
       subNum = 0;
       $("#results").show();
