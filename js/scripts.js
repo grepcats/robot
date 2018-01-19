@@ -11,10 +11,13 @@ function numberCheck(input) {
 //req2
 function zeroOne(input) {
   var input = numberCheck(input);
-  if ((/[1]/).test(input)) {
-    var input = "Boop";
+  if (input % 3 === 0) {
+    var input = "I'm sorry Dave, I'm afraid I can't do that"
     return input;
-  } else if ((/[0]/).test(input)) {
+    } else if ((/[1]/).test(input)) {
+      var input = "Boop";
+      return input;
+    } else if ((/[0]/).test(input)) {
       var input = "Beep";
       return input;
     } else {
