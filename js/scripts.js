@@ -1,7 +1,5 @@
-//function zeroOne(input) {
-//  if (input.contains(0))
-//}
 
+//req1
 function numberCheck(input) {
   if (isNaN(parseInt(input))) {
     return input + " is not a number";
@@ -10,9 +8,22 @@ function numberCheck(input) {
   }
 };
 
+//req2
+function zeroOne(input) {
+  var input = numberCheck(input);
+  if ((/[0]/).test(input)) {
+    var input = "Beep";
+    return input;
+  } else {
+    return input;
+  }
+}
+
+
 $(document).ready(function() {
-  var input = prompt("please enter a number");
-  alert(numberCheck(input));
+  var userInput = prompt("please enter a number");
+  alert(zeroOne(userInput));
+
 
 
 
