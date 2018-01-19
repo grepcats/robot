@@ -2,9 +2,11 @@
 //identifies if input is number or NaN
 function numberCheck(input) {
   if (isNaN(parseInt(input)) || input === "" || input === " ") {
+    console.log(parseInt(input));
     return false;
   } else {
-    return input;
+    console.log(parseInt(input));
+    return parseInt(input);
   }
 };
 
@@ -31,7 +33,6 @@ function zeroOne(input, name) {
 
 //returns array of range of numbers from 0 to input.
 function inputArray(input) {
-  //var input = numberCheck(input);
   var countTo = []
   for (var i = 0; i <= input; i++) {
     countTo.push(i);
@@ -58,12 +59,14 @@ $(document).ready(function() {
   $("#number-input").submit(function(event) {
     event.preventDefault();
     $(".output").remove();
-    var userInput = $("#number").val();
+    var userInput = numberCheck($("#number").val());
     var nameInput = $("#name").val();
     var revNum = 0;
 
 
-    if (numberCheck(userInput) !== false) {
+    if (userInput !== false) {
+      debugger;
+      console.log(userInput);
       subNum = 0;
       $("#results").show();
       $(".wrong").remove();
