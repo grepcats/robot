@@ -11,7 +11,7 @@ function numberCheck(input) {
 //takes a string/number and replaces it with other content
 function zeroOne(input) {
   var input = numberCheck(input);
-  if (input % 3 === 0) {
+  if (input % 3 === 0 && input !== 0) {
     var input = "I'm sorry Dave, I'm afraid I can't do that"
     return input;
     } else if ((/[1]/).test(input)) {
@@ -45,8 +45,8 @@ function transform(input) {
 
 $(document).ready(function() {
   var userInput = prompt("please enter a number");
-  alert(zeroOne(userInput));
-  //alert(transform(inputArray(userInput)));
+  //alert(zeroOne(userInput));
+  alert(transform(inputArray(userInput)));
 
 
 
