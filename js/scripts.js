@@ -1,5 +1,5 @@
 
-//req1
+//identifies if input is number or NaN
 function numberCheck(input) {
   if (isNaN(parseInt(input))) {
     return input + " is not a number";
@@ -8,7 +8,7 @@ function numberCheck(input) {
   }
 };
 
-//req2
+//takes a string/number and replaces it with other content
 function zeroOne(input) {
   var input = numberCheck(input);
   if (input % 3 === 0) {
@@ -25,6 +25,7 @@ function zeroOne(input) {
     }
 }
 
+//returns array of range of numbers from 0 to argument.
 function inputArray(input) {
   var input = numberCheck(input);
   var countTo = []
@@ -34,10 +35,19 @@ function inputArray(input) {
   return countTo;
 }
 
+//take array of numbers from zeroOne and output changes
+function transform(input) {
+  var transformedArray = input.map(function(number) {
+    return zeroOne(number);
+  });
+  return transformedArray;
+}
+
 $(document).ready(function() {
   var userInput = prompt("please enter a number");
-  //alert(zeroOne(userInput));
-  alert(inputArray(userInput));
+  alert(zeroOne(userInput));
+  //alert(transform(inputArray(userInput)));
+
 
 
 
