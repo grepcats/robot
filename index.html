@@ -11,12 +11,14 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hello!</h1>
-      <h2>I'm a friendly robot.</h2>
+      <div class="jumbotron">
+        <h1>Hello!</h1>
+        <h2>I'm a friendly robot.</h2>
+      </div>
       <div class="flex-plz">
 
         <div class="robot chunk">
-          <img src="img/robot.svg"/ class="main-img">
+          <img src="img/robot.svg" class="main-img">
         </div>
         <div class="chunk the-form">
           <form id="number-input">
@@ -28,7 +30,7 @@
               <label for="number">Please enter a number for me to read</label>
               <input type="text" id="number" class="form-control">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-robot">Submit</button>
           </form>
         </div>
 
@@ -37,7 +39,7 @@
 
       </div>
       <footer class="fixed-bottom">
-        <p>robot found <a href="https://visualpharm.com/free-icons/robot%202-595b40b85ba036ed117da97d">here</a></p>
+        <p id="ref">Robot found <a href="https://visualpharm.com/free-icons/robot%202-595b40b85ba036ed117da97d" target="_blank">here</a></p>
       </footer>
     </div>
   </body>
