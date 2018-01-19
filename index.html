@@ -6,7 +6,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-
+    <!--TODO: fix classes & IDs, review for refactoring, add comments, add option to reverse order and return to original, add feature that makes robot extra mad when you keep inputting bad content, add feature when clickign submit brings user to bottom of page-->
     <title>Beep Boop Robot</title>
   </head>
   <body>
@@ -16,7 +16,6 @@
         <h2>I'm a friendly robot.</h2>
       </div>
       <div class="flex-plz">
-
         <div class="robot chunk">
           <img src="img/robot.svg" class="main-img">
         </div>
@@ -33,10 +32,11 @@
             <button type="submit" class="btn btn-robot">Submit</button>
           </form>
         </div>
-
       </div>
       <div id="results">
-
+      </div>
+      <div id="reverse">
+        <p><span id="reverse-click">Click here</span> to reverse the results!</p>
       </div>
       <footer class="fixed-bottom">
         <p id="ref">Robot found <a href="https://visualpharm.com/free-icons/robot%202-595b40b85ba036ed117da97d" target="_blank">here</a></p>

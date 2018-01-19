@@ -44,18 +44,24 @@ function transform(input, name) {
   var transformedArray = input.map(function(number) {
     return zeroOne(number, name);
   });
-
   return transformedArray;
 }
 
+//takes an array and reverses it
+function reverse(input) {
+  return input.reverse();
+}
+
 $(document).ready(function() {
+  var subNum = 0;
 
   $("#number-input").submit(function(event) {
     event.preventDefault();
-    //$("html, body").scrollBottom();
     $(".output").remove();
     var userInput = $("#number").val();
     var nameInput = $("#name").val();
+    var revNum = 0;
+
 
     if (numberCheck(userInput) !== false) {
       $("#results").show();
@@ -66,11 +72,32 @@ $(document).ready(function() {
       output.forEach(function(number) {
         $(".output").append(number + "<br/>")
       });
+      $("#reverse").show();
+
+
+      $("#reverse-click").click(function() {
+        revNum++;
+        var reversed = reverse(output);
+        $(".output").remove();
+        if (revNum === 0) {
+          $("#results").append("<div class='output'><h3>Reversed " + userInput + "!")
+        } else if (revNum > 0 && revNum < 5) {
+          $("#results").append("<div class='output'><h3>Reversed " + userInput + " again, good job!")
+        } else {
+          $("#results").append("<div class='output'><h3>Ok calm down, " + nameInput + ".")
+        }
+
+        reversed.forEach(function(number) {
+          $(".output").append(number + "<br/>")
+        });
+      });
     } else {
+      subNum++;
+      console.log(subNum);
       $(".wrong").remove();
       $("#results").show();
-      $("#results").append("<div class='wrong'><p>That's not a number! Try again</p>")
-      $(".robot").html("<img src='img/angry-robot.svg' id='angry'/>");
+      $("#results").append("<div class='wrong'><h3>That's not a number! Try again</h3>")
+      $(".robot").html("<img src='img/angry-robot.svg' class='robot-replace'/>");
     }
 
   });

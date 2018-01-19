@@ -28,7 +28,12 @@ Example Output: Beep, Boop, 2, I'm sorry, Dave. I'm afraid I can't do that, 4, 5
 Example Input: cat
 Example Output: error message and return to Program
 
+
 ---
-Program takes user's name and displays in the "I'm sorry, Dave. I'm afraid I can't do that" transformation
+8. Program takes user's name and displays in the "I'm sorry, Dave. I'm afraid I can't do that" transformation
 Example Input: Kayla, 3
 Example Output: Beep, Boop, I'm sorry, Kayla. I'm afraid I can't do that.
+
+9. Program offers an option to return output in reverse.
+
+10. Program sasses user if they keep reversing output
