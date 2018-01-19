@@ -11,12 +11,15 @@ function numberCheck(input) {
 //req2
 function zeroOne(input) {
   var input = numberCheck(input);
-  if ((/[0]/).test(input)) {
-    var input = "Beep";
+  if ((/[1]/).test(input)) {
+    var input = "Boop";
     return input;
-  } else {
-    return input;
-  }
+  } else if ((/[0]/).test(input)) {
+      var input = "Beep";
+      return input;
+    } else {
+      return input;
+    }
 }
 
 
