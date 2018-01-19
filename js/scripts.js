@@ -64,6 +64,7 @@ $(document).ready(function() {
 
 
     if (numberCheck(userInput) !== false) {
+      subNum = 0;
       $("#results").show();
       $(".wrong").remove();
       $(".robot").html("<img src='img/robot.svg'/>");
@@ -93,11 +94,13 @@ $(document).ready(function() {
       });
     } else {
       subNum++;
-      console.log(subNum);
       $(".wrong").remove();
       $("#results").show();
       $("#results").append("<div class='wrong'><h3>That's not a number! Try again</h3>")
       $(".robot").html("<img src='img/angry-robot.svg' class='robot-replace'/>");
+      if (subNum >= 5) {
+        $(".robot").html("<img src='img/v-angry-robot.svg' class='robot-replace'/>");
+      }
     }
 
   });
