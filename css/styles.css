@@ -44,6 +44,10 @@ color: #455a64;
   margin:0;
 }
 
+#results h3 {
+  margin-top: 0;
+}
+
 .jumbotron {
   text-align: center;
   background-color: #90a4ae;
@@ -84,4 +88,10 @@ footer {
   color: #fff;
   background-color: #1dc49a;
   border-color: #1dc49a;
+}
+
+@media all and (max-width: 640px) {
+  #results {
+    width: 100%;
+  }
 }

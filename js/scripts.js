@@ -52,7 +52,7 @@ $(document).ready(function() {
 
   $("#number-input").submit(function(event) {
     event.preventDefault();
-
+    //$("html, body").scrollBottom();
     $(".output").remove();
     var userInput = $("#number").val();
     var nameInput = $("#name").val();
@@ -61,7 +61,7 @@ $(document).ready(function() {
       $("#results").show();
       $(".wrong").remove();
       $(".robot").html("<img src='img/robot.svg'/>");
-      $("#results").append("<div class='output'><p>You entered: " + userInput + ".")
+      $("#results").append("<div class='output'><h3>You entered: " + userInput)
       var output = transform(inputArray(userInput), nameInput);
       output.forEach(function(number) {
         $(".output").append(number + "<br/>")
