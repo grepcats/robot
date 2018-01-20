@@ -1,5 +1,15 @@
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
 body {
   color: #455a64;
+  background-color:#1de9b6;
+}
+
+.container {
+  background-color: #fff;
 }
 
 a {
@@ -10,6 +20,7 @@ color: #455a64;
   display:none;
   text-align:center;
   margin-top: 10px;
+  font-size: 1.25em;
 }
 
 #reverse-click {
@@ -17,7 +28,7 @@ color: #455a64;
   color: #90a4ae;
 }
 
-.flex-plz {
+.flex-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -73,16 +84,17 @@ color: #455a64;
   color: #455a64;
 }
 
-footer {
-  margin-top: 30px;
+.footer {
+  height: 40px;
+  text-align: center;
+
 }
 
 #ref {
   color: #90a4ae;
 }
 
-/***button***/
-
+/***robot button***/
 
 .btn {
   color: #fff;
@@ -101,8 +113,16 @@ footer {
   border-color: #1dc49a;
 }
 
+/***media queries***/
+
 @media all and (max-width: 640px) {
   #results {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 769px) {
+  .jumbotron {
+    border: 5px solid #1de9b6;
   }
 }
