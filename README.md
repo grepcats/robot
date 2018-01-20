@@ -64,7 +64,7 @@ Alternatively, user may access the website at https://grepcats.github.io/robot
 
 No known bugs at this time.
 
-## Support and contact details
+## Support and Contact Details
 
 If there are any issues or questions, please contact me at kayla.renee at gmail dot com or create an issue in GitHub.
 
