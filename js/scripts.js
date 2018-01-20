@@ -3,9 +3,6 @@ var subNum = 0;
 
 //takes a number and replaces it with other content
 function replaceZeroOneThree(input, name) {
-  if (name === "") {
-    name = "friend";
-  }
   if (input % 3 === 0 && input !== 0) {
     input = "I'm sorry " + name + ", I'm afraid I can't do that";
     return input;
@@ -53,6 +50,9 @@ $(document).ready(function() {
     var nameInput = $("#name").val();
     var revNum = 0;
 
+    if (nameInput === "") {
+      nameInput = "friend";
+    }
     //evaluates userInput to ensure it is a number before executing rest of code
     if (!isNaN(userInput)) {
       subNum = 0; //reset submit number so robot is happy again
@@ -74,7 +74,7 @@ $(document).ready(function() {
         //header displays different text depending on number of times reversed
         if (revNum === 0) {
           $("#results").append("<div class='output'><h3>Reversed " + userInput + "!");
-        } else if (revNum > 0 && revNum < 5) {
+        } else if (revNum > 0 && revNum <= 3) {
           $("#results").append("<div class='output'><h3>Reversed " + userInput + " again, good job!");
         } else {
           $("#results").append("<div class='output'><h3>Ok calm down, " + nameInput + ".");
@@ -89,10 +89,11 @@ $(document).ready(function() {
       //handle user submitting non-numeric content
       subNum++;
       $(".wrong").remove();
+      $("#reverse").hide();
       $("#results").show();
       $("#results").append("<div class='wrong'><h3>That's not a number! Try again</h3>");
       $(".robot").html("<img src='img/angry-robot.svg' class='robot-replace'/>");
-      if (subNum >= 5) {
+      if (subNum >= 3) {
         $(".robot").html("<img src='img/v-angry-robot.svg' class='robot-replace'/>");
       }
     }
