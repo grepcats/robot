@@ -1,3 +1,5 @@
+/*****general*****/
+
 html {
   height: 100%;
   overflow-y: scroll;
@@ -8,25 +10,31 @@ body {
   background-color:#1de9b6;
 }
 
-.container {
-  background-color: #fff;
-}
-
 a {
 color: #455a64;
 }
 
-#reverse {
-  display:none;
-  text-align:center;
-  margin-top: 10px;
-  font-size: 1.25em;
+.container {
+  background-color: #fff;
 }
 
-#reverse-click {
-  font-weight: bold;
-  color: #90a4ae;
+/*****jumbotron*****/
+
+.jumbotron {
+  text-align: center;
+  background-color: #90a4ae;
 }
+
+.jumbotron h1 {
+  font-weight: bold;
+}
+
+.jumbotron h1,
+.jumbotron h2 {
+  color: #455a64;
+}
+
+/*****main page content*****/
 
 .flex-container {
   display: flex;
@@ -51,6 +59,8 @@ color: #455a64;
   width: 100%;
 }
 
+/*****results*****/
+
 #results {
   display:none;
   margin:auto;
@@ -70,32 +80,31 @@ color: #455a64;
   margin-top: 0;
 }
 
-.jumbotron {
-  text-align: center;
-  background-color: #90a4ae;
+#reverse {
+  display:none;
+  text-align:center;
+  margin-top: 10px;
+  font-size: 1.25em;
 }
 
-.jumbotron h1 {
+#reverse-click {
   font-weight: bold;
+  color: #90a4ae;
 }
 
-.jumbotron h1,
-.jumbotron h2 {
-  color: #455a64;
-}
+/*****footer*****/
 
 .footer {
   height: 40px;
   text-align: center;
   margin-top: 30px;
-
 }
 
 #ref {
   color: #90a4ae;
 }
 
-/***robot button***/
+/*****robot button*****/
 
 .btn {
   color: #fff;
@@ -114,7 +123,7 @@ color: #455a64;
   border-color: #1dc49a;
 }
 
-/***media queries***/
+/*****media queries*****/
 
 @media all and (max-width: 640px) {
   #results {
